@@ -1,0 +1,20 @@
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\bin\Release\SteamQuickSwitch.exe.config
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\bin\Release\SteamQuickSwitch.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\bin\Release\SteamQuickSwitch.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.csprojResolveAssemblyReference.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.Form1.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.Properties.Resources.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.csproj.GenerateResource.Cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.csproj.CoreCompileInputs.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamQuickSwitch.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Release\SteamQuickSwitch.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.csprojResolveAssemblyReference.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.Form1.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.Properties.Resources.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.csproj.GenerateResource.Cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SteamAccountManager.csproj.CoreCompileInputs.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\bin\Release\SQS.exe.config
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\bin\Release\SQS.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\bin\Release\SQS.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SQS.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Release\SQS.pdb

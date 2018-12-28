@@ -1,0 +1,30 @@
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csprojResolveAssemblyReference.cache
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.Form1.resources
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.Properties.Resources.resources
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csproj.GenerateResource.Cache
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csproj.CoreCompileInputs.cache
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\bin\Debug\SteamQuickSwitch.exe.config
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\bin\Debug\SteamQuickSwitch.exe
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\bin\Debug\SteamQuickSwitch.pdb
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamQuickSwitch.exe
+C:\Users\Mattias\source\repos\SteamAccountManager\SteamAccountManager\obj\Debug\SteamQuickSwitch.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\bin\Debug\SteamQuickSwitch.exe.config
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\bin\Debug\SteamQuickSwitch.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\bin\Debug\SteamQuickSwitch.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csprojResolveAssemblyReference.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.Form1.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.Properties.Resources.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csproj.GenerateResource.Cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csproj.CoreCompileInputs.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamQuickSwitch.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Unorganized\SteamAccountManager\SteamAccountManager\obj\Debug\SteamQuickSwitch.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csprojResolveAssemblyReference.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.Form1.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.Properties.Resources.resources
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csproj.GenerateResource.Cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SteamAccountManager.csproj.CoreCompileInputs.cache
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\bin\Debug\SQS.exe.config
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\bin\Debug\SQS.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\bin\Debug\SQS.pdb
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SQS.exe
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamAccountManager\SteamAccountManager\obj\Debug\SQS.pdb
