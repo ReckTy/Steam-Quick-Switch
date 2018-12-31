@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2ZG2bpZa4/6/55+ToBsMypysHs4mdTVZvjpEJEc8X0k=</dsig:DigestValue>
+        <dsig:DigestValue>zdpIqvAU8a/e89bx1jiWanm6w5pTyALNgWn4gZNFyLM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7pXiM1O+9DdV+gm3iMArQZBFscCLh0jOOheHaPzl2PM=</dsig:DigestValue>
+        <dsig:DigestValue>NhKKIlaQvS4Q4NkT57Ao/R+TyuskDrA4FRAdVPzYFjg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,7 +72,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ScPkKvc7DzTaPiVA5DFZYqyu81i4/y5IIcro+NO1QVQ=</dsig:DigestValue>
+      <dsig:DigestValue>l97zvm+ocW+7firpy0scQo8NCxLWb23eFZ9YK2eiRKA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SQS.exe.config" size="2598">

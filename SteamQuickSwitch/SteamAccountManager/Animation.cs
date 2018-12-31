@@ -57,7 +57,7 @@ namespace SteamQuickSwitch
                     if (Process.GetProcessesByName(_string).Length < 1)
                     {
                         ToggleWindow();
-                        
+
                         hotkeyTimer.Interval = 500;
                         break;
                     }
@@ -154,7 +154,7 @@ namespace SteamQuickSwitch
             this.Location = new Point(Properties.Settings.Default.StartingPosX, Properties.Settings.Default.StartingPosY);
             FadeSQS(true);
         }
-        
+
         static void Animate(Form _formToMove, Point _endPos)
         {
             animationInProgess = true;
@@ -180,7 +180,7 @@ namespace SteamQuickSwitch
             animationInProgess = false;
             animationThread.Abort();
         }
-        
+
         void ToggleWindow()
         {
             if (GetCurrentPanelIndex() == 5)
@@ -192,13 +192,13 @@ namespace SteamQuickSwitch
             if (this.Visible)
             {
                 focusLabel.Focus();
-                
+
                 FadeSQS(false);
             }
             else
             {
                 buttonHome_Click(null, null);
-                
+
                 this.Visible = true;
                 this.Focus();
                 this.BringToFront();
@@ -239,7 +239,7 @@ namespace SteamQuickSwitch
 
         Point GetCenterPos()
         {
-            return new Point((Screen.PrimaryScreen.Bounds.Width - formSize.Width) / 2, 
+            return new Point((Screen.PrimaryScreen.Bounds.Width - formSize.Width) / 2,
                 (Screen.PrimaryScreen.Bounds.Height - formSize.Height) / 2);
         }
     }

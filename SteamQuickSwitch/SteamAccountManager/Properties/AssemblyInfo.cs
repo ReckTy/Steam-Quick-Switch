@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Steam Quick Switch")]
 [assembly: AssemblyDescription("A software used to make it easier to switch between multiple Steam accounts.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DevByReckTy")]
 [assembly: AssemblyProduct("Steam Quick Switch")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]

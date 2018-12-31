@@ -1310,9 +1310,9 @@
             this.labelVersionDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.labelVersionDisplay.Location = new System.Drawing.Point(1, 230);
             this.labelVersionDisplay.Name = "labelVersionDisplay";
-            this.labelVersionDisplay.Size = new System.Drawing.Size(136, 13);
+            this.labelVersionDisplay.Size = new System.Drawing.Size(127, 13);
             this.labelVersionDisplay.TabIndex = 2;
-            this.labelVersionDisplay.Text = "Steam Quick Switch v1.1.1";
+            this.labelVersionDisplay.Text = "Steam Quick Switch v1.0";
             // 
             // labelSettingStartX
             // 

@@ -12,6 +12,6 @@ C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\Stea
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SQS.TrustInfo.xml
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SQS.exe.manifest
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SQS.application
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csprojAssemblyReference.cache
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\bin\Release\SensitiveDataStorage.dll
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csproj.CopyComplete
-C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csprojAssemblyReference.cache

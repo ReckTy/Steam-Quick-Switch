@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+
 using System.Diagnostics;
+using System.Media;
 using Microsoft.Win32;
-using System.Management;
+using System.Threading;
 
 namespace SteamQuickSwitch
 {
@@ -22,7 +24,7 @@ namespace SteamQuickSwitch
 
         SensitiveDataStorage.SensitiveDataStorage sds = new SensitiveDataStorage.SensitiveDataStorage();
         int sdsIDManagerPassword = 0, sdsIDUsernames = 1, sdsIDPasswords = 19;
-        
+
         public Form1()
         {
             if (!Application.ExecutablePath.EndsWith("SQS.exe"))
@@ -57,7 +59,7 @@ namespace SteamQuickSwitch
 
             LoadSavedSettings();
         }
-        
+
         void AssignArrays()
         {
             panelArray = new Panel[] 
@@ -99,8 +101,6 @@ namespace SteamQuickSwitch
         void ChangePanel(int desiredPanel)
         {
             focusLabel.Focus();
-
-            LoadLoginInfo();
             
             switch (GetCurrentPanelIndex())
             {
@@ -111,6 +111,7 @@ namespace SteamQuickSwitch
                     textBoxPassword.Clear();
 
                     SaveLoginInfo();
+                    EmptyListViewLogins();
                     break;
 
                 // panelSettings
@@ -169,6 +170,16 @@ namespace SteamQuickSwitch
                     }
                     break;
             }
+            
+            switch (desiredPanel)
+            {
+                case 0:
+                    RefreshStartButtons();
+                    break;
+                case 1:
+                    FillListViewLogins();
+                    break;
+            }
 
             ClearPanels();
             panelArray[desiredPanel].Visible = true;
@@ -204,18 +215,15 @@ namespace SteamQuickSwitch
             bool isAnyBtnVisible = false;
             for (int i = 0; i < 18; i++)
             {
-                if (listViewLogins.Items.Count >= i + 1)
+                if (sds.ReadLine("Data", sdsIDUsernames + i) != "")
                 {
                     startButtons[i].Visible = true;
                     isAnyBtnVisible = true;
 
-                    startButtons[i].Text = listViewLogins.Items[i].Text; // Set button name
-                    // Maybe possible to add something more here
+                    startButtons[i].Text = sds.ReadLine("Data", sdsIDUsernames + i); // Set button name
                 }
                 else
-                {
                     startButtons[i].Visible = false;
-                }
             }
 
             if (!isAnyBtnVisible)
@@ -583,10 +591,9 @@ namespace SteamQuickSwitch
 
         bool UsingManagerPassword()
         {
-            if (sds.ReadLine("Data", sdsIDManagerPassword).Length > 0) return true;
-            return false;
+            return (sds.ReadLine("Data", sdsIDManagerPassword).Length > 0) ? true : false;
         }
-        
+
     }
 }
  

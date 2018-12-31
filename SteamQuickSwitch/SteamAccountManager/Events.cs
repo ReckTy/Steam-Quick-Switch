@@ -110,20 +110,15 @@ namespace SteamQuickSwitch
 
             int currentButtonID = GetButtonByObject(_sender);
 
-            foreach (Process proc in Process.GetProcessesByName("steam")) // Kill the current steam process
-            {
-                proc.Kill();
-            }
+            foreach (Process proc in Process.GetProcessesByName("steam")) proc.Kill();
 
             // Starts new SteamProcess with login details
-            string steamStartArgs = "-login " + listViewLogins.Items[currentButtonID].Text + " " + listViewLogins.Items[currentButtonID].SubItems[1].Text;
+            string steamStartArgs = "-login " + sds.ReadLine("Data", sdsIDUsernames + currentButtonID) + " " + sds.ReadLine("Data", sdsIDPasswords + currentButtonID);
+            //string steamStartArgs = "-login " + listViewLogins.Items[currentButtonID].Text + " " + listViewLogins.Items[currentButtonID].SubItems[1].Text;
             if (settingSteamConsole.Checked) steamStartArgs += " -console";
             Process steamProcess = Process.Start(@"C:\Program Files (x86)\Steam\Steam.exe", steamStartArgs);
 
-            if (setting2.Checked)
-            {
-                ToggleWindow();
-            }
+            if (setting2.Checked) ToggleWindow();
         }
 
         #endregion
@@ -178,8 +173,8 @@ namespace SteamQuickSwitch
             if (selectedItemCount == 1)
             {
                 ChangePanel(4);
-                textBoxEditUsername.Text = listViewLogins.Items[selectedItemIndex].Text;
-                textBoxEditPassword.Text = listViewLogins.Items[selectedItemIndex].SubItems[1].Text;
+                textBoxEditUsername.Text = sds.ReadLine("Data", sdsIDUsernames + selectedItemIndex);
+                textBoxEditPassword.Text = sds.ReadLine("Data", sdsIDPasswords + selectedItemIndex);
 
                 latestSelectedLvi = selectedItemIndex;
             }
@@ -294,19 +289,11 @@ namespace SteamQuickSwitch
         private void buttonManagerLogin_Click(object sender, EventArgs e)
         {
             if (textBoxManagerPasswordLogin.Text == sds.ReadLine("Data", sdsIDManagerPassword))
+            //if (textBoxManagerPasswordLogin.Text == Encryption.Decrypt(Properties.Settings.Default.ManagerPassword))
             {
                 ChangePanel(1);
                 textBoxUsername.Focus();
-
-                SoundPlayer player = new SoundPlayer(@"c:\Windows\Media\Speech Disambiguation.wav");
-                player.Play();
             }
-            else
-            {
-                SoundPlayer player = new SoundPlayer(@"c:\Windows\Media\Speech Misrecognition.wav");
-                player.Play();
-            }
-
             textBoxManagerPasswordLogin.Text = "";
         }
 
@@ -350,17 +337,15 @@ namespace SteamQuickSwitch
             textBoxEditUsername.Text = "";
             textBoxEditPassword.Text = "";
 
-            ClearPanels();
-            panelArray[1].Visible = true;
-            panelArray[1].Enabled = true;
+            ChangePanel(1);
         }
 
         private void buttonEditConfirm_Click(object sender, EventArgs e)
         {
             if (textBoxEditUsername.Text != "" && textBoxEditPassword.Text != "")
             {
-                listViewLogins.Items[latestSelectedLvi].Text = textBoxEditUsername.Text;
-                listViewLogins.Items[latestSelectedLvi].SubItems[1].Text = textBoxEditPassword.Text;
+                sds.WriteLine("Data", sdsIDUsernames + latestSelectedLvi, textBoxEditUsername.Text);
+                sds.WriteLine("Data", sdsIDPasswords + latestSelectedLvi, textBoxEditPassword.Text);
                 buttonEditCancel_Click(null, null);
             }
             else
@@ -459,14 +444,8 @@ namespace SteamQuickSwitch
         {
             bool hadPassBefore = false;
             bool oldPassIsMatching = false;
-            if (UsingManagerPassword())
-            {
-                hadPassBefore = true;
-            }
-            if (textBoxManagerPasswordOld.Text == sds.ReadLine("Data", sdsIDManagerPassword))
-            {
-                oldPassIsMatching = true;
-            }
+            if (UsingManagerPassword()) hadPassBefore = true;
+            if (textBoxManagerPasswordOld.Text == sds.ReadLine("Data", sdsIDManagerPassword)) oldPassIsMatching = true;
 
             if (hadPassBefore && !oldPassIsMatching)
             {

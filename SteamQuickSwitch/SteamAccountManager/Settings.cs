@@ -10,7 +10,7 @@ namespace SteamQuickSwitch
     public partial class Form1
     {
         bool settingsLoaded = false;
-
+        
         /// <summary>
         /// Saves all settings displayed in the settingsPanel, except LoginInfo & ManagerPassword
         /// </summary>
@@ -94,8 +94,6 @@ namespace SteamQuickSwitch
         
         void LoadSavedSettings()
         {
-            LoadLoginInfo();
-
             #region Settings Tab
 
             // CheckBox(Start with Windows)
@@ -160,15 +158,41 @@ namespace SteamQuickSwitch
             
         }
 
-        void LoadLoginInfo()
+        void FillListViewLogins()
         {
             for (int i = 0; i < 18; i++)
             {
-                if (sds.ReadLine("Data", sdsIDPasswords + i) != "")
+                if (sds.ReadLine("Data", sdsIDUsernames + i) != "")
                 {
                     ListViewItem lvi = new ListViewItem(sds.ReadLine("Data", sdsIDUsernames + i));
                     lvi.SubItems.Add(sds.ReadLine("Data", sdsIDPasswords + i));
                     listViewLogins.Items.Insert(i, lvi);
+                }
+            }
+        }
+
+        void EmptyListViewLogins()
+        {
+            foreach (ListViewItem lvi in listViewLogins.Items) lvi.Remove();
+        }
+
+        void SaveLoginInfo()
+        {
+            for (int i = 0; i < 18; i++)
+            {
+                if (listViewLogins.Items.Count >= (i + 1))
+                {
+                    sds.WriteLine("Data", sdsIDUsernames + i, listViewLogins.Items[i].Text);
+                    sds.WriteLine("Data", sdsIDPasswords + i, listViewLogins.Items[i].SubItems[1].Text);
+                }
+                else
+                {
+                    if (i != 1)
+                    {
+                        sds.WriteLine("Data", sdsIDUsernames + i, "");
+                        sds.WriteLine("Data", sdsIDPasswords + i, "");
+
+                    }
                 }
             }
         }
@@ -179,29 +203,9 @@ namespace SteamQuickSwitch
             Properties.Settings.Default.Reload();
         }
 
-        void SaveLoginInfo()
-        {
-            for (int i = 0; i < 18; i++)
-            {
-                if (listViewLogins.Items.Count >= (i+1))
-                {
-                    sds.WriteLine("Data", sdsIDUsernames + i, listViewLogins.Items[i].Text);
-                    sds.WriteLine("Data", sdsIDPasswords + i, listViewLogins.Items[i].SubItems[1].Text);
-                }
-                else
-                {
-                    sds.WriteLine("Data", sdsIDUsernames + i, "");
-                    sds.WriteLine("Data", sdsIDPasswords + i, "");
-                }
-            }
-
-            WriteSettingsToDisk();
-        }
-        
         /// <summary>
         /// Checks if passed in TextBox.Text can be parsed to an int, etc.
         /// </summary>
-        /// <param name="_textBox"></param>
         /// <returns>true = TextBox.Text can be parsed to an int</returns>
         bool FixIntTextbox(TextBox _textBox)
         {
