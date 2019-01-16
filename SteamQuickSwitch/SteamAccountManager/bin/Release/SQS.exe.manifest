@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SQS.exe" size="100336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SQS.exe" size="99824">
       <assemblyIdentity name="SQS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ea/C7IwqRH0yN7Zlz3+tRYHCkJIbtFoFjdwC/DhNSZw=</dsig:DigestValue>
+        <dsig:DigestValue>n59DN2w7uUTE0TzyLx6xj6EFLBArklpImvYYPH2uSy8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

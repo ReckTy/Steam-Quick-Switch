@@ -13,10 +13,8 @@ namespace SteamQuickSwitch
 {
     public partial class Form1 : Form
     {
-        Size formSize = new Size(489, 302);
+        private readonly Size formSize = new Size(489, 302);
         
-        bool allowAppExit = false;
-
         Panel[] panelArray;
         Button[] startButtons;
         
@@ -27,13 +25,8 @@ namespace SteamQuickSwitch
 
         public Form1()
         {
-            if (!Application.ExecutablePath.EndsWith("SQS.exe"))
-            {
-                MessageBox.Show("Executable name has to be 'SQS' to prevent misconceptions.");
-                allowAppExit = true;
-                Application.Exit();
-                return;
-            }
+            InitializeComponent();
+            
             // Close identical apps
             Process[] procList = Process.GetProcessesByName("SQS");
             if (procList.Length > 1)
@@ -43,20 +36,18 @@ namespace SteamQuickSwitch
                     if (proc.Id != currentProcess.Id)
                         proc.Kill();
             }
-
-            InitializeComponent();
-
+            
             AssignArrays();
 
             // Set panel locations
             while (Size != formSize) Size = formSize;
             foreach (Panel panel in panelArray) panel.Location = new Point(5, 54);
 
-            this.Visible = false;
+            Visible = false;
 
             sds.EncryptionPassword = "ChangedForYourSafety";
             sds.CreateFile("Data");
-
+            
             LoadSavedSettings();
         }
 

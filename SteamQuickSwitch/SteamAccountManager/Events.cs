@@ -15,19 +15,15 @@ namespace SteamQuickSwitch
         int latestSelectedLvi;
 
         bool forceItemRemoval = false;
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!allowAppExit && e.CloseReason != CloseReason.WindowsShutDown)
-            {
-                if (MessageBox.Show("Are you sure you want to quit SQS?", "Steam Quick Switch", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
-                    e.Cancel = true;
-            }
+            // Checks if user really wants to exit
+            if (e.CloseReason == CloseReason.ApplicationExitCall && MessageBox.Show("Are you sure you want to quit SQS?", 
+                "Steam Quick Switch", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
+                e.Cancel = true;
+            else
+                return;
 
             // SaveLoginInfo if CurrentPanel is panelManage
             if (GetCurrentPanelIndex() == 1)
@@ -130,7 +126,6 @@ namespace SteamQuickSwitch
             if (e.KeyCode == Keys.Enter)
             {
                 textBoxPassword.Focus();
-
                 e.SuppressKeyPress = true;
             }
         }
@@ -140,7 +135,6 @@ namespace SteamQuickSwitch
             if (e.KeyCode == Keys.Enter)
             {
                 buttonAddLogin_Click(null, null);
-
                 e.SuppressKeyPress = true;
             }
         }
@@ -289,7 +283,6 @@ namespace SteamQuickSwitch
         private void buttonManagerLogin_Click(object sender, EventArgs e)
         {
             if (textBoxManagerPasswordLogin.Text == sds.ReadLine("Data", sdsIDManagerPassword))
-            //if (textBoxManagerPasswordLogin.Text == Encryption.Decrypt(Properties.Settings.Default.ManagerPassword))
             {
                 ChangePanel(1);
                 textBoxUsername.Focus();
@@ -299,6 +292,8 @@ namespace SteamQuickSwitch
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            focusLabel.Focus();
+
             DialogResult result = MessageBox.Show("You can reset your password in the settings tab." + "\n" + "Do you want to change it?",
                 "Steam Quick Switch",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);

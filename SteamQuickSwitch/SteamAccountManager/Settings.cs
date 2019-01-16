@@ -166,7 +166,7 @@ namespace SteamQuickSwitch
                 {
                     ListViewItem lvi = new ListViewItem(sds.ReadLine("Data", sdsIDUsernames + i));
                     lvi.SubItems.Add(sds.ReadLine("Data", sdsIDPasswords + i));
-                    listViewLogins.Items.Insert(i, lvi);
+                    listViewLogins.Items.Add(lvi);
                 }
             }
         }
@@ -187,12 +187,8 @@ namespace SteamQuickSwitch
                 }
                 else
                 {
-                    if (i != 1)
-                    {
-                        sds.WriteLine("Data", sdsIDUsernames + i, "");
-                        sds.WriteLine("Data", sdsIDPasswords + i, "");
-
-                    }
+                    sds.WriteLine("Data", sdsIDUsernames + i, "");
+                    sds.WriteLine("Data", sdsIDPasswords + i, "");
                 }
             }
         }

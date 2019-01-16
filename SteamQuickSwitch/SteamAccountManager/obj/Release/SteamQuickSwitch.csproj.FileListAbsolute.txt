@@ -1,7 +1,6 @@
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\bin\Release\SQS.exe.config
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\bin\Release\SQS.exe
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\bin\Release\SQS.pdb
-C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.Form1.resources
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.Properties.Resources.resources
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csproj.GenerateResource.Cache
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csproj.CoreCompileInputs.cache
@@ -15,3 +14,4 @@ C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\Stea
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csprojAssemblyReference.cache
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\bin\Release\SensitiveDataStorage.dll
 C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.csproj.CopyComplete
+C:\Users\Mattias\Desktop\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager\obj\Release\SteamQuickSwitch.Form1.resources
