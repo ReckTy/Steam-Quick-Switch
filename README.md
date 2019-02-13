@@ -8,14 +8,17 @@ Before you start using the software, you should know that SQS can easily be acce
 
 When you start SQS you can see four buttons at the top. These are: The Home-tab, The Manage-tab, The Hotkey-Button and The Settings-tab.
 
-At the Home-tab, you simply press what ever 
+- At the Home-tab, you simply press what ever account you want to log into.
+- At the Manage-tab, you add your login-details for your accounts to appear on the Home-tab.
+- The Hotkey-button acts like the [Alt + Q]-Hotkey, minimizing SQS.
+- At last, the Settings-tab, you can change all the settings for SQS and most importantly, set a password for accessing the Manage-tab.
 
 
 ## Privacy
 
 To store account-details, SQS uses encryption which uses Hardware-ID.
 
-SQS does NOT store any data where it's not supposed to.
+SQS does NOT store any data where it's not supposed to. Proof of this can be found in the source-code.
 
 ## Screenshots
 ![home](https://user-images.githubusercontent.com/39988708/52696946-9db15d00-2f70-11e9-8396-7203790f1e68.png)
