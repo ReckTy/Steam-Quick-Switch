@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -104,15 +105,24 @@ namespace SteamQuickSwitch
         {
             focusLabel.Focus();
 
+            string executablePath = Properties.Settings.Default.SteamPath + @"\" + "Steam.exe";
+
+            // Return if 'steam.exe' can't be found
+            if (!File.Exists(executablePath))
+            {
+                MessageBox.Show("Can't find 'Steam.exe'.\n" + 
+                                "Make sure the Steam path in Settings is assigned correctly.", "Steam Quick Switch",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            } 
+
             int currentButtonID = GetButtonByObject(_sender);
 
             foreach (Process proc in Process.GetProcessesByName("steam")) proc.Kill();
 
             // Starts new SteamProcess with login details
             string steamStartArgs = "-login " + sds.ReadLine("Data", sdsIDUsernames + currentButtonID) + " " + sds.ReadLine("Data", sdsIDPasswords + currentButtonID);
-            //string steamStartArgs = "-login " + listViewLogins.Items[currentButtonID].Text + " " + listViewLogins.Items[currentButtonID].SubItems[1].Text;
-            if (settingSteamConsole.Checked) steamStartArgs += " -console";
-            Process steamProcess = Process.Start(@"C:\Program Files (x86)\Steam\Steam.exe", steamStartArgs);
+            Process steamProcess = Process.Start(executablePath, steamStartArgs);
 
             if (setting2.Checked) ToggleWindow();
         }
@@ -414,6 +424,37 @@ namespace SteamQuickSwitch
         private void trackBarSettingAnimSpeed_ValueChanged(object sender, EventArgs e)
         {
             animationSpeed = trackBarSettingAnimSpeed.Value;
+        }
+        
+        private void buttonSettingBrowseSteamPath_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog dlg = new FolderBrowserDialog() { Description = "Select your Steam-folder", ShowNewFolderButton = false })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    if (!dlg.SelectedPath.EndsWith("Steam"))
+                    {
+                        string[] pathSplit = dlg.SelectedPath.Split('\\');
+                        string selectedFileName = pathSplit[pathSplit.Length - 1];
+
+                        DialogResult result = MessageBox.Show("Are you sure you selected your Steam-folder?\n" +
+                            "The folders name is usually 'Steam', not '" + selectedFileName + "'", "Steam Quick Switch",
+                            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+
+                        if (result == DialogResult.No)
+                        {
+                            buttonSettingBrowseSteamPath_Click(null, null);
+                            return;
+                        }
+                        else if (result == DialogResult.Cancel)
+                        {
+                            return;
+                        }
+                    }
+
+                    textBoxSettingSteamPath.Text = dlg.SelectedPath;
+                }
+            }
         }
 
         #region panelSetManagerPassword

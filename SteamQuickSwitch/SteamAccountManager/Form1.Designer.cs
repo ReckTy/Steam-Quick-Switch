@@ -79,8 +79,10 @@
             this.panelSettings = new System.Windows.Forms.Panel();
             this.comboBoxSettingColorScheme = new System.Windows.Forms.ComboBox();
             this.textBoxSettingAnimPosX = new System.Windows.Forms.TextBox();
+            this.textBoxSettingSteamPath = new System.Windows.Forms.TextBox();
             this.labelSettingFinishAt = new System.Windows.Forms.Label();
             this.labelSettingFinishX = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.labelSettingAnimSpeed = new System.Windows.Forms.Label();
             this.labelInfo = new System.Windows.Forms.Label();
@@ -98,6 +100,7 @@
             this.labelInfo1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxSettingAnimPosY = new System.Windows.Forms.TextBox();
+            this.buttonSettingBrowseSteamPath = new System.Windows.Forms.Button();
             this.buttonExtras = new System.Windows.Forms.Button();
             this.buttonSaveSettings = new System.Windows.Forms.Button();
             this.labelSettingStartY = new System.Windows.Forms.Label();
@@ -106,7 +109,6 @@
             this.labelVersionDisplay = new System.Windows.Forms.Label();
             this.labelSettingStartX = new System.Windows.Forms.Label();
             this.setting2 = new System.Windows.Forms.CheckBox();
-            this.settingSteamConsole = new System.Windows.Forms.CheckBox();
             this.settingAnimStartingPos = new System.Windows.Forms.CheckBox();
             this.setting1 = new System.Windows.Forms.CheckBox();
             this.settingCustomStartingPos = new System.Windows.Forms.CheckBox();
@@ -929,8 +931,10 @@
             // 
             this.panelSettings.Controls.Add(this.comboBoxSettingColorScheme);
             this.panelSettings.Controls.Add(this.textBoxSettingAnimPosX);
+            this.panelSettings.Controls.Add(this.textBoxSettingSteamPath);
             this.panelSettings.Controls.Add(this.labelSettingFinishAt);
             this.panelSettings.Controls.Add(this.labelSettingFinishX);
+            this.panelSettings.Controls.Add(this.label8);
             this.panelSettings.Controls.Add(this.label22);
             this.panelSettings.Controls.Add(this.labelSettingAnimSpeed);
             this.panelSettings.Controls.Add(this.labelInfo);
@@ -942,6 +946,7 @@
             this.panelSettings.Controls.Add(this.textBoxSettingPosY);
             this.panelSettings.Controls.Add(this.panel1);
             this.panelSettings.Controls.Add(this.textBoxSettingAnimPosY);
+            this.panelSettings.Controls.Add(this.buttonSettingBrowseSteamPath);
             this.panelSettings.Controls.Add(this.buttonExtras);
             this.panelSettings.Controls.Add(this.buttonSaveSettings);
             this.panelSettings.Controls.Add(this.labelSettingStartY);
@@ -950,7 +955,6 @@
             this.panelSettings.Controls.Add(this.labelVersionDisplay);
             this.panelSettings.Controls.Add(this.labelSettingStartX);
             this.panelSettings.Controls.Add(this.setting2);
-            this.panelSettings.Controls.Add(this.settingSteamConsole);
             this.panelSettings.Controls.Add(this.settingAnimStartingPos);
             this.panelSettings.Controls.Add(this.setting1);
             this.panelSettings.Controls.Add(this.settingCustomStartingPos);
@@ -999,6 +1003,18 @@
             this.textBoxSettingAnimPosX.TabIndex = 6;
             this.textBoxSettingAnimPosX.Text = "0";
             // 
+            // textBoxSettingSteamPath
+            // 
+            this.textBoxSettingSteamPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSettingSteamPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.textBoxSettingSteamPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSettingSteamPath.ForeColor = System.Drawing.Color.White;
+            this.textBoxSettingSteamPath.Location = new System.Drawing.Point(71, 172);
+            this.textBoxSettingSteamPath.Name = "textBoxSettingSteamPath";
+            this.textBoxSettingSteamPath.Size = new System.Drawing.Size(123, 20);
+            this.textBoxSettingSteamPath.TabIndex = 1;
+            this.textBoxSettingSteamPath.Text = "C:\\Program Files (x86)\\Steam\\";
+            // 
             // labelSettingFinishAt
             // 
             this.labelSettingFinishAt.AutoSize = true;
@@ -1018,6 +1034,16 @@
             this.labelSettingFinishX.Size = new System.Drawing.Size(14, 13);
             this.labelSettingFinishX.TabIndex = 7;
             this.labelSettingFinishX.Text = "X";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(4, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Steam Path:";
             // 
             // label22
             // 
@@ -1235,6 +1261,24 @@
             this.textBoxSettingAnimPosY.TabIndex = 7;
             this.textBoxSettingAnimPosY.Text = "0";
             // 
+            // buttonSettingBrowseSteamPath
+            // 
+            this.buttonSettingBrowseSteamPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSettingBrowseSteamPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonSettingBrowseSteamPath.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSettingBrowseSteamPath.FlatAppearance.BorderSize = 0;
+            this.buttonSettingBrowseSteamPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonSettingBrowseSteamPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonSettingBrowseSteamPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettingBrowseSteamPath.ForeColor = System.Drawing.Color.White;
+            this.buttonSettingBrowseSteamPath.Location = new System.Drawing.Point(200, 171);
+            this.buttonSettingBrowseSteamPath.Name = "buttonSettingBrowseSteamPath";
+            this.buttonSettingBrowseSteamPath.Size = new System.Drawing.Size(50, 21);
+            this.buttonSettingBrowseSteamPath.TabIndex = 21;
+            this.buttonSettingBrowseSteamPath.Text = "Browse";
+            this.buttonSettingBrowseSteamPath.UseVisualStyleBackColor = false;
+            this.buttonSettingBrowseSteamPath.Click += new System.EventHandler(this.buttonSettingBrowseSteamPath_Click);
+            // 
             // buttonExtras
             // 
             this.buttonExtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1310,9 +1354,9 @@
             this.labelVersionDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.labelVersionDisplay.Location = new System.Drawing.Point(1, 230);
             this.labelVersionDisplay.Name = "labelVersionDisplay";
-            this.labelVersionDisplay.Size = new System.Drawing.Size(127, 13);
+            this.labelVersionDisplay.Size = new System.Drawing.Size(136, 13);
             this.labelVersionDisplay.TabIndex = 2;
-            this.labelVersionDisplay.Text = "Steam Quick Switch v1.0";
+            this.labelVersionDisplay.Text = "Steam Quick Switch v1.0.1";
             // 
             // labelSettingStartX
             // 
@@ -1335,18 +1379,6 @@
             this.setting2.TabIndex = 1;
             this.setting2.Text = "Close SQS after changing account";
             this.setting2.UseVisualStyleBackColor = true;
-            // 
-            // settingSteamConsole
-            // 
-            this.settingSteamConsole.AutoSize = true;
-            this.settingSteamConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingSteamConsole.ForeColor = System.Drawing.Color.White;
-            this.settingSteamConsole.Location = new System.Drawing.Point(7, 172);
-            this.settingSteamConsole.Name = "settingSteamConsole";
-            this.settingSteamConsole.Size = new System.Drawing.Size(129, 17);
-            this.settingSteamConsole.TabIndex = 5;
-            this.settingSteamConsole.Text = "Enable Steam console";
-            this.settingSteamConsole.UseVisualStyleBackColor = true;
             // 
             // settingAnimStartingPos
             // 
@@ -1943,7 +1975,9 @@
         private System.Windows.Forms.ComboBox comboBoxSettingColorScheme;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label focusLabel;
-        private System.Windows.Forms.CheckBox settingSteamConsole;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxSettingSteamPath;
+        private System.Windows.Forms.Button buttonSettingBrowseSteamPath;
     }
 }
 

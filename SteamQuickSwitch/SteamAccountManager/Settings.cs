@@ -62,7 +62,7 @@ namespace SteamQuickSwitch
             }
 
             Properties.Settings.Default.CloseAfterAccountChange = setting2.Checked;
-            Properties.Settings.Default.SteamConsole = settingSteamConsole.Checked;
+            Properties.Settings.Default.SteamPath = textBoxSettingSteamPath.Text;
 
             // Update Pos-textBoxes (if CustomStartingPos == false)
             if (!settingCustomStartingPos.Checked)
@@ -108,7 +108,7 @@ namespace SteamQuickSwitch
             // ComboBox(Color Scheme)
             comboBoxSettingColorScheme.SelectedIndex = Properties.Settings.Default.ColorScheme;
 
-            settingSteamConsole.Checked = Properties.Settings.Default.SteamConsole;
+            textBoxSettingSteamPath.Text = Properties.Settings.Default.SteamPath;
 
             #region StartingPosition
 

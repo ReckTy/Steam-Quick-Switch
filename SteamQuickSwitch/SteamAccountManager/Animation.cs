@@ -75,8 +75,6 @@ namespace SteamQuickSwitch
             {
                 if (settingAnimStartingPos.Checked)
                 {
-                    // <Move Animation Here>
-
                     currentPosX = Properties.Settings.Default.StartingPosX;
                     currentPosY = Properties.Settings.Default.StartingPosY;
 
@@ -136,9 +134,7 @@ namespace SteamQuickSwitch
                     // Start new animationThread
                     animationThread = new Thread(() => Animate(this, new Point(Properties.Settings.Default.AnimatePosX, Properties.Settings.Default.AnimatePosY)));
                     animationThread.Start();
-
-                    // </Move Animation Here>
-
+                    
                     return;
                 }
 

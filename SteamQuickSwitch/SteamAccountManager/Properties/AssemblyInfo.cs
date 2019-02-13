@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Steam Quick Switch")]
 [assembly: AssemblyDescription("A software used to make it easier to switch between multiple Steam accounts.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DevByReckTy")]
+[assembly: AssemblyCompany("Github.ReckTy")]
 [assembly: AssemblyProduct("Steam Quick Switch")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
 [assembly: NeutralResourcesLanguage("en")]
 

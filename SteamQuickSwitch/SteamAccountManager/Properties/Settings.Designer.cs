@@ -145,18 +145,6 @@ namespace SteamQuickSwitch.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool SteamConsole {
-            get {
-                return ((bool)(this["SteamConsole"]));
-            }
-            set {
-                this["SteamConsole"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool FirstRun {
             get {
@@ -164,6 +152,18 @@ namespace SteamQuickSwitch.Properties {
             }
             set {
                 this["FirstRun"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Steam")]
+        public string SteamPath {
+            get {
+                return ((string)(this["SteamPath"]));
+            }
+            set {
+                this["SteamPath"] = value;
             }
         }
     }

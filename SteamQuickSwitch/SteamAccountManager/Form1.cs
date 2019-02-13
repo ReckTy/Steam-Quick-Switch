@@ -26,9 +26,13 @@ namespace SteamQuickSwitch
         public Form1()
         {
             InitializeComponent();
-            
+
             // Close identical apps
-            Process[] procList = Process.GetProcessesByName("SQS");
+            string[] pathSplit = Application.ExecutablePath.Split('\\');
+            string executableName = pathSplit[pathSplit.Length - 1].Split('.')[0];
+            
+            Process[] procList = Process.GetProcessesByName(executableName);
+
             if (procList.Length > 1)
             {
                 Process currentProcess = Process.GetCurrentProcess();
@@ -128,8 +132,8 @@ namespace SteamQuickSwitch
                     //settingAnimStartingPos
                     settingAnimStartingPos.Checked = Properties.Settings.Default.AnimateStartingPosition;
 
-                    //settingSteamConsole
-                    settingSteamConsole.Checked = Properties.Settings.Default.SteamConsole;
+                    //settingSteamPath
+                    textBoxSettingSteamPath.Text = Properties.Settings.Default.SteamPath;
 
                     // Assign label values
                     labelSettingStartAt.Enabled = Properties.Settings.Default.CustomStartingPositions;

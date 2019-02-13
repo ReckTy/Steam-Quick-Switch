@@ -4,7 +4,7 @@
   <description asmv2:iconFile="SQS x48.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="SQS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="SQS" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="SQS.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SQS.exe" size="99824">
-      <assemblyIdentity name="SQS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SQS.exe" size="100864">
+      <assemblyIdentity name="SQS" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>n59DN2w7uUTE0TzyLx6xj6EFLBArklpImvYYPH2uSy8=</dsig:DigestValue>
+        <dsig:DigestValue>YFggswpusD1D7saBMjv+ivZWOBr8utS5xgehCipzw+8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,13 +75,13 @@
       <dsig:DigestValue>l97zvm+ocW+7firpy0scQo8NCxLWb23eFZ9YK2eiRKA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SQS.exe.config" size="2598">
+  <file name="SQS.exe.config" size="2618">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yXxLiASw8tf3dOUfrJUP+5QP1/XbSLuwJnqPDqiYnVI=</dsig:DigestValue>
+      <dsig:DigestValue>6vv71ob6J9XxnYgVVdgBUb0PUiFkwNrUxjJ3NV4g8m8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
