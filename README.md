@@ -26,3 +26,6 @@ SQS does NOT store any data where it's not supposed to. Proof of this can be fou
 ![manage](https://user-images.githubusercontent.com/39988708/52697394-a9e9ea00-2f71-11e9-86ac-8eebb3b079fe.png)
 
 ![settings](https://user-images.githubusercontent.com/39988708/52697415-b5d5ac00-2f71-11e9-823b-a76e92ea4edd.png)
+
+## Extras
+If you would like to support this project you can donate [HERE](www.google.com)
