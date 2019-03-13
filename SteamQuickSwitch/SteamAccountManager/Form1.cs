@@ -46,7 +46,7 @@ namespace SteamQuickSwitch
             // Close identical apps
             string[] exePathSplit = Application.ExecutablePath.Split('\\');
             string executableName = exePathSplit[exePathSplit.Length - 1].Split('.')[0];
-            
+
             Process[] procList = Process.GetProcessesByName(executableName);
 
             if (procList.Length > 1)
