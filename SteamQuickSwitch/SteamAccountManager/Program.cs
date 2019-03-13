@@ -16,12 +16,12 @@ namespace SteamQuickSwitch
         [STAThread]
         static void Main()
         {
+            CheckForUpdatesAsync();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             Application.Run(new Form1());
-
-            CheckForUpdatesAsync();
         }
 
         private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
