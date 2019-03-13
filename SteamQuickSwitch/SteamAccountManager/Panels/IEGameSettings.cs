@@ -194,6 +194,19 @@ namespace SteamQuickSwitch
 
         private void backgroundWorkerFillAccounts_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
+            if (steamNickname.Length == 0)
+            {
+                MessageBox.Show("No userdata could be found.\n" +
+                    "Please make sure the Steam-path in Settings is correct.", "Steam Quick Switch", 
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+                // Update status-label
+                labelIEGameSettingsStatus.Text = "Status: No userdata found.";
+
+                loadingAccounts = false;
+                return;
+            }
+
             // Enable comboBoxes + buttons
             comboBoxIAccount.Enabled = true;
             buttonImportGameSettings.Enabled = false;
@@ -250,11 +263,25 @@ namespace SteamQuickSwitch
 
         private void backgroundWorkerFillGames_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            // Enable comboBoxes + buttons
+            if (steamAvailableGames.Length == 0)
+            {
+                MessageBox.Show("No saved game-settings could be found for this account.", "Steam Quick Switch", 
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+                // Update comboBoxes
+                comboBoxIAccount.Enabled = true;
+                comboBoxIGame.Items.Clear();
+
+                // Update status-label
+                labelIEGameSettingsStatus.Text = "Status: No saved game-settings found.";
+
+                loadingAvailableGames = false;
+                return;
+            }
+
+            // Update comboBoxes
             comboBoxIAccount.Enabled = true;
             comboBoxIGame.Enabled = true;
-
-            // Update comboBox
             comboBoxIGame.Items.Clear();
             comboBoxIGame.Items.AddRange(steamAvailableGames);
             
