@@ -1,6 +1,4 @@
 # Steam Quick Switch
-
-## Description
 Steam Quick Switch is a software designed to make it faster switching between multiple Steam-accounts. 
 
 ## Usage
