@@ -36,7 +36,7 @@ namespace SteamQuickSwitch
 
         private static async Task CheckForUpdatesAsync()
         {
-            using (var manager = new UpdateManager("https://github.com/ReckTy/Steam-Quick-Switch/tree/master/SteamQuickSwitch/Releases"))
+            using (var manager = new UpdateManager("https://github.com/ReckTy/Steam-Quick-Switch/releases"))
             {
                 await manager.UpdateApp();
             }
