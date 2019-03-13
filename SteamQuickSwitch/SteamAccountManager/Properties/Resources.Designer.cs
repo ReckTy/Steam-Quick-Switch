@@ -63,9 +63,9 @@ namespace SteamQuickSwitch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Arrow_Up {
+        internal static System.Drawing.Bitmap infoicon {
             get {
-                object obj = ResourceManager.GetObject("Arrow-Up", resourceCulture);
+                object obj = ResourceManager.GetObject("infoicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SteamQuickSwitch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap infoicon {
+        internal static System.Drawing.Bitmap UpArrow {
             get {
-                object obj = ResourceManager.GetObject("infoicon", resourceCulture);
+                object obj = ResourceManager.GetObject("UpArrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

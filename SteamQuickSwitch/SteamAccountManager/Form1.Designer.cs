@@ -78,6 +78,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelSettings = new System.Windows.Forms.Panel();
             this.comboBoxSettingColorScheme = new System.Windows.Forms.ComboBox();
+            this.buttonSettingExtraFeatures = new System.Windows.Forms.Button();
             this.textBoxSettingAnimPosX = new System.Windows.Forms.TextBox();
             this.textBoxSettingSteamPath = new System.Windows.Forms.TextBox();
             this.labelSettingFinishAt = new System.Windows.Forms.Label();
@@ -144,6 +145,24 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panelExtraFeatures = new System.Windows.Forms.Panel();
+            this.buttonExtraFeaturesBack = new System.Windows.Forms.Button();
+            this.buttonExtraFeaturesIEGameSettings = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panelIEGameSettings = new System.Windows.Forms.Panel();
+            this.comboBoxIGame = new System.Windows.Forms.ComboBox();
+            this.comboBoxEAccount = new System.Windows.Forms.ComboBox();
+            this.comboBoxIAccount = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.buttonExportGameSettings = new System.Windows.Forms.Button();
+            this.buttonIEUserdataBack = new System.Windows.Forms.Button();
+            this.buttonImportGameSettings = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.labelIEGameSettingsStatus = new System.Windows.Forms.Label();
+            this.backgroundWorkerFillAccounts = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerFillGames = new System.ComponentModel.BackgroundWorker();
             this.panelTopBar.SuspendLayout();
             this.panelHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManageArrow)).BeginInit();
@@ -157,6 +176,8 @@
             this.panelManageEditItem.SuspendLayout();
             this.panelSettingsExceptions.SuspendLayout();
             this.panelExtras.SuspendLayout();
+            this.panelExtraFeatures.SuspendLayout();
+            this.panelIEGameSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTopBar
@@ -170,7 +191,7 @@
             this.panelTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopBar.Location = new System.Drawing.Point(0, 0);
             this.panelTopBar.Name = "panelTopBar";
-            this.panelTopBar.Size = new System.Drawing.Size(972, 51);
+            this.panelTopBar.Size = new System.Drawing.Size(1457, 51);
             this.panelTopBar.TabIndex = 0;
             this.panelTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopBar_MouseDown);
             this.panelTopBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTopBar_MouseMove);
@@ -204,7 +225,7 @@
             this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSettings.Image = ((System.Drawing.Image)(resources.GetObject("buttonSettings.Image")));
-            this.buttonSettings.Location = new System.Drawing.Point(921, 0);
+            this.buttonSettings.Location = new System.Drawing.Point(1406, 0);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(51, 51);
             this.buttonSettings.TabIndex = 0;
@@ -284,7 +305,7 @@
             // 
             // pictureBoxManageArrow
             // 
-            this.pictureBoxManageArrow.BackgroundImage = global::SteamQuickSwitch.Properties.Resources.Arrow_Up;
+            this.pictureBoxManageArrow.BackgroundImage = global::SteamQuickSwitch.Properties.Resources.UpArrow;
             this.pictureBoxManageArrow.Location = new System.Drawing.Point(56, 0);
             this.pictureBoxManageArrow.Name = "pictureBoxManageArrow";
             this.pictureBoxManageArrow.Size = new System.Drawing.Size(32, 32);
@@ -930,6 +951,7 @@
             // panelSettings
             // 
             this.panelSettings.Controls.Add(this.comboBoxSettingColorScheme);
+            this.panelSettings.Controls.Add(this.buttonSettingExtraFeatures);
             this.panelSettings.Controls.Add(this.textBoxSettingAnimPosX);
             this.panelSettings.Controls.Add(this.textBoxSettingSteamPath);
             this.panelSettings.Controls.Add(this.labelSettingFinishAt);
@@ -990,6 +1012,24 @@
             this.comboBoxSettingColorScheme.Size = new System.Drawing.Size(86, 21);
             this.comboBoxSettingColorScheme.TabIndex = 9;
             this.comboBoxSettingColorScheme.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSettingColorScheme_SelectionChangeCommitted);
+            // 
+            // buttonSettingExtraFeatures
+            // 
+            this.buttonSettingExtraFeatures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSettingExtraFeatures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonSettingExtraFeatures.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSettingExtraFeatures.FlatAppearance.BorderSize = 0;
+            this.buttonSettingExtraFeatures.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonSettingExtraFeatures.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonSettingExtraFeatures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettingExtraFeatures.ForeColor = System.Drawing.Color.White;
+            this.buttonSettingExtraFeatures.Location = new System.Drawing.Point(381, 143);
+            this.buttonSettingExtraFeatures.Name = "buttonSettingExtraFeatures";
+            this.buttonSettingExtraFeatures.Size = new System.Drawing.Size(91, 23);
+            this.buttonSettingExtraFeatures.TabIndex = 2;
+            this.buttonSettingExtraFeatures.Text = "Extra Features";
+            this.buttonSettingExtraFeatures.UseVisualStyleBackColor = false;
+            this.buttonSettingExtraFeatures.Click += new System.EventHandler(this.buttonSettingExtraFeatures_Click);
             // 
             // textBoxSettingAnimPosX
             // 
@@ -1354,9 +1394,9 @@
             this.labelVersionDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.labelVersionDisplay.Location = new System.Drawing.Point(1, 230);
             this.labelVersionDisplay.Name = "labelVersionDisplay";
-            this.labelVersionDisplay.Size = new System.Drawing.Size(136, 13);
+            this.labelVersionDisplay.Size = new System.Drawing.Size(197, 13);
             this.labelVersionDisplay.TabIndex = 2;
-            this.labelVersionDisplay.Text = "Steam Quick Switch v1.0.1";
+            this.labelVersionDisplay.Text = "Steam Quick Switch v.<current-version>";
             // 
             // labelSettingStartX
             // 
@@ -1811,15 +1851,259 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "Mattias Aldhagen";
             // 
+            // panelExtraFeatures
+            // 
+            this.panelExtraFeatures.Controls.Add(this.buttonExtraFeaturesBack);
+            this.panelExtraFeatures.Controls.Add(this.buttonExtraFeaturesIEGameSettings);
+            this.panelExtraFeatures.Controls.Add(this.label11);
+            this.panelExtraFeatures.Location = new System.Drawing.Point(973, 800);
+            this.panelExtraFeatures.Name = "panelExtraFeatures";
+            this.panelExtraFeatures.Size = new System.Drawing.Size(478, 243);
+            this.panelExtraFeatures.TabIndex = 1;
+            // 
+            // buttonExtraFeaturesBack
+            // 
+            this.buttonExtraFeaturesBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExtraFeaturesBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonExtraFeaturesBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExtraFeaturesBack.FlatAppearance.BorderSize = 0;
+            this.buttonExtraFeaturesBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonExtraFeaturesBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonExtraFeaturesBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExtraFeaturesBack.ForeColor = System.Drawing.Color.White;
+            this.buttonExtraFeaturesBack.Location = new System.Drawing.Point(424, 214);
+            this.buttonExtraFeaturesBack.Name = "buttonExtraFeaturesBack";
+            this.buttonExtraFeaturesBack.Size = new System.Drawing.Size(48, 23);
+            this.buttonExtraFeaturesBack.TabIndex = 3;
+            this.buttonExtraFeaturesBack.Text = "Back";
+            this.buttonExtraFeaturesBack.UseVisualStyleBackColor = false;
+            this.buttonExtraFeaturesBack.Click += new System.EventHandler(this.buttonExtraFeaturesBack_Click);
+            // 
+            // buttonExtraFeaturesIEGameSettings
+            // 
+            this.buttonExtraFeaturesIEGameSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExtraFeaturesIEGameSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonExtraFeaturesIEGameSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExtraFeaturesIEGameSettings.FlatAppearance.BorderSize = 0;
+            this.buttonExtraFeaturesIEGameSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonExtraFeaturesIEGameSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonExtraFeaturesIEGameSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExtraFeaturesIEGameSettings.ForeColor = System.Drawing.Color.White;
+            this.buttonExtraFeaturesIEGameSettings.Location = new System.Drawing.Point(160, 80);
+            this.buttonExtraFeaturesIEGameSettings.Name = "buttonExtraFeaturesIEGameSettings";
+            this.buttonExtraFeaturesIEGameSettings.Size = new System.Drawing.Size(158, 23);
+            this.buttonExtraFeaturesIEGameSettings.TabIndex = 2;
+            this.buttonExtraFeaturesIEGameSettings.Text = "Import/Export Game-Settings";
+            this.buttonExtraFeaturesIEGameSettings.UseVisualStyleBackColor = false;
+            this.buttonExtraFeaturesIEGameSettings.Click += new System.EventHandler(this.buttonExtraFeaturesIEGameSettings_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(170, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(139, 25);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Extra Features";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelIEGameSettings
+            // 
+            this.panelIEGameSettings.Controls.Add(this.comboBoxIGame);
+            this.panelIEGameSettings.Controls.Add(this.comboBoxEAccount);
+            this.panelIEGameSettings.Controls.Add(this.comboBoxIAccount);
+            this.panelIEGameSettings.Controls.Add(this.label23);
+            this.panelIEGameSettings.Controls.Add(this.label24);
+            this.panelIEGameSettings.Controls.Add(this.label21);
+            this.panelIEGameSettings.Controls.Add(this.buttonExportGameSettings);
+            this.panelIEGameSettings.Controls.Add(this.buttonIEUserdataBack);
+            this.panelIEGameSettings.Controls.Add(this.buttonImportGameSettings);
+            this.panelIEGameSettings.Controls.Add(this.label15);
+            this.panelIEGameSettings.Controls.Add(this.labelIEGameSettingsStatus);
+            this.panelIEGameSettings.Location = new System.Drawing.Point(973, 551);
+            this.panelIEGameSettings.Name = "panelIEGameSettings";
+            this.panelIEGameSettings.Size = new System.Drawing.Size(478, 243);
+            this.panelIEGameSettings.TabIndex = 1;
+            // 
+            // comboBoxIGame
+            // 
+            this.comboBoxIGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.comboBoxIGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxIGame.ForeColor = System.Drawing.Color.White;
+            this.comboBoxIGame.FormattingEnabled = true;
+            this.comboBoxIGame.ItemHeight = 13;
+            this.comboBoxIGame.Location = new System.Drawing.Point(72, 141);
+            this.comboBoxIGame.MaxDropDownItems = 50;
+            this.comboBoxIGame.Name = "comboBoxIGame";
+            this.comboBoxIGame.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxIGame.TabIndex = 9;
+            this.comboBoxIGame.SelectedIndexChanged += new System.EventHandler(this.comboBoxIGame_SelectedIndexChanged);
+            // 
+            // comboBoxEAccount
+            // 
+            this.comboBoxEAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.comboBoxEAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEAccount.ForeColor = System.Drawing.Color.White;
+            this.comboBoxEAccount.FormattingEnabled = true;
+            this.comboBoxEAccount.ItemHeight = 13;
+            this.comboBoxEAccount.Location = new System.Drawing.Point(271, 118);
+            this.comboBoxEAccount.MaxDropDownItems = 50;
+            this.comboBoxEAccount.Name = "comboBoxEAccount";
+            this.comboBoxEAccount.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxEAccount.TabIndex = 9;
+            // 
+            // comboBoxIAccount
+            // 
+            this.comboBoxIAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.comboBoxIAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxIAccount.ForeColor = System.Drawing.Color.White;
+            this.comboBoxIAccount.FormattingEnabled = true;
+            this.comboBoxIAccount.ItemHeight = 13;
+            this.comboBoxIAccount.Location = new System.Drawing.Point(72, 96);
+            this.comboBoxIAccount.MaxDropDownItems = 50;
+            this.comboBoxIAccount.Name = "comboBoxIAccount";
+            this.comboBoxIAccount.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxIAccount.TabIndex = 9;
+            this.comboBoxIAccount.SelectedValueChanged += new System.EventHandler(this.comboBoxIAccount_SelectedValueChanged);
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(120, 125);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(38, 13);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Game:";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(313, 102);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(50, 13);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Account:";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(114, 80);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(50, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Account:";
+            // 
+            // buttonExportGameSettings
+            // 
+            this.buttonExportGameSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExportGameSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonExportGameSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExportGameSettings.FlatAppearance.BorderSize = 0;
+            this.buttonExportGameSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonExportGameSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonExportGameSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExportGameSettings.ForeColor = System.Drawing.Color.White;
+            this.buttonExportGameSettings.Location = new System.Drawing.Point(282, 149);
+            this.buttonExportGameSettings.Name = "buttonExportGameSettings";
+            this.buttonExportGameSettings.Size = new System.Drawing.Size(112, 23);
+            this.buttonExportGameSettings.TabIndex = 3;
+            this.buttonExportGameSettings.Text = "Export to selection";
+            this.buttonExportGameSettings.UseVisualStyleBackColor = false;
+            this.buttonExportGameSettings.Click += new System.EventHandler(this.buttonExportGameSettings_Click);
+            // 
+            // buttonIEUserdataBack
+            // 
+            this.buttonIEUserdataBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonIEUserdataBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonIEUserdataBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonIEUserdataBack.FlatAppearance.BorderSize = 0;
+            this.buttonIEUserdataBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonIEUserdataBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonIEUserdataBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIEUserdataBack.ForeColor = System.Drawing.Color.White;
+            this.buttonIEUserdataBack.Location = new System.Drawing.Point(424, 214);
+            this.buttonIEUserdataBack.Name = "buttonIEUserdataBack";
+            this.buttonIEUserdataBack.Size = new System.Drawing.Size(48, 23);
+            this.buttonIEUserdataBack.TabIndex = 3;
+            this.buttonIEUserdataBack.Text = "Back";
+            this.buttonIEUserdataBack.UseVisualStyleBackColor = false;
+            this.buttonIEUserdataBack.Click += new System.EventHandler(this.buttonIEUserdataBack_Click);
+            // 
+            // buttonImportGameSettings
+            // 
+            this.buttonImportGameSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonImportGameSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonImportGameSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonImportGameSettings.FlatAppearance.BorderSize = 0;
+            this.buttonImportGameSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.buttonImportGameSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonImportGameSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonImportGameSettings.ForeColor = System.Drawing.Color.White;
+            this.buttonImportGameSettings.Location = new System.Drawing.Point(79, 172);
+            this.buttonImportGameSettings.Name = "buttonImportGameSettings";
+            this.buttonImportGameSettings.Size = new System.Drawing.Size(121, 23);
+            this.buttonImportGameSettings.TabIndex = 3;
+            this.buttonImportGameSettings.Text = "Import from selection";
+            this.buttonImportGameSettings.UseVisualStyleBackColor = false;
+            this.buttonImportGameSettings.Click += new System.EventHandler(this.buttonImportGameSettings_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(107, 30);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(264, 25);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Import/Export Game-Settings";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelIEGameSettingsStatus
+            // 
+            this.labelIEGameSettingsStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelIEGameSettingsStatus.AutoSize = true;
+            this.labelIEGameSettingsStatus.ForeColor = System.Drawing.Color.White;
+            this.labelIEGameSettingsStatus.Location = new System.Drawing.Point(3, 229);
+            this.labelIEGameSettingsStatus.Name = "labelIEGameSettingsStatus";
+            this.labelIEGameSettingsStatus.Size = new System.Drawing.Size(40, 13);
+            this.labelIEGameSettingsStatus.TabIndex = 2;
+            this.labelIEGameSettingsStatus.Text = "Status:";
+            // 
+            // backgroundWorkerFillAccounts
+            // 
+            this.backgroundWorkerFillAccounts.WorkerReportsProgress = true;
+            this.backgroundWorkerFillAccounts.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerFillAccounts_DoWork);
+            this.backgroundWorkerFillAccounts.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerFillAccounts_RunWorkerCompleted);
+            // 
+            // backgroundWorkerFillGames
+            // 
+            this.backgroundWorkerFillGames.WorkerReportsProgress = true;
+            this.backgroundWorkerFillGames.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerFillGames_DoWork);
+            this.backgroundWorkerFillGames.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerFillGames_RunWorkerCompleted);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(972, 1049);
+            this.ClientSize = new System.Drawing.Size(1457, 1049);
             this.ContextMenuStrip = this.contextMenuStrip2;
             this.Controls.Add(this.panelTopBar);
             this.Controls.Add(this.panelManageLogin);
+            this.Controls.Add(this.panelIEGameSettings);
+            this.Controls.Add(this.panelExtraFeatures);
             this.Controls.Add(this.panelSettingsExceptions);
             this.Controls.Add(this.panelExtras);
             this.Controls.Add(this.panelSettings);
@@ -1836,6 +2120,7 @@
             this.Text = " ";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelTopBar.ResumeLayout(false);
             this.panelTopBar.PerformLayout();
             this.panelHome.ResumeLayout(false);
@@ -1858,6 +2143,10 @@
             this.panelSettingsExceptions.PerformLayout();
             this.panelExtras.ResumeLayout(false);
             this.panelExtras.PerformLayout();
+            this.panelExtraFeatures.ResumeLayout(false);
+            this.panelExtraFeatures.PerformLayout();
+            this.panelIEGameSettings.ResumeLayout(false);
+            this.panelIEGameSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1978,6 +2267,25 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxSettingSteamPath;
         private System.Windows.Forms.Button buttonSettingBrowseSteamPath;
+        private System.Windows.Forms.Button buttonSettingExtraFeatures;
+        private System.Windows.Forms.Panel panelExtraFeatures;
+        private System.Windows.Forms.Button buttonExtraFeaturesBack;
+        private System.Windows.Forms.Button buttonExtraFeaturesIEGameSettings;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panelIEGameSettings;
+        private System.Windows.Forms.Button buttonIEUserdataBack;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label labelIEGameSettingsStatus;
+        private System.Windows.Forms.Button buttonExportGameSettings;
+        private System.Windows.Forms.Button buttonImportGameSettings;
+        private System.Windows.Forms.ComboBox comboBoxIGame;
+        private System.Windows.Forms.ComboBox comboBoxIAccount;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBoxEAccount;
+        private System.Windows.Forms.Label label24;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerFillAccounts;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerFillGames;
     }
 }
 

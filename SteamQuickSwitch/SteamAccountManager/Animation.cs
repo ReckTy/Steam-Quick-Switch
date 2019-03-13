@@ -7,7 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.Drawing;
-using System.Timers;
 
 namespace SteamQuickSwitch
 {
@@ -15,7 +14,7 @@ namespace SteamQuickSwitch
     {
         bool fadeIP = false;
         bool fadeIn = false;
-
+        
         System.Windows.Forms.Timer fadeTimer = new System.Windows.Forms.Timer() { Interval = 20 };
 
         static Thread animationThread;
@@ -91,13 +90,9 @@ namespace SteamQuickSwitch
 
                     float tickAmtX = Math.Abs(totalX);
                     float tickAmtY = Math.Abs(totalY);
-
-                    //MessageBox.Show(totalX + " " + tickAmtX.ToString() + "\n" + totalY + " " + tickAmtY.ToString());
-
+                    
                     tickAmount = ((int)(tickAmtX > (int)(tickAmtY) ? (int)tickAmtX : (int)tickAmtY));
-
-                    //MessageBox.Show("tickAmount: " + tickAmount.ToString());
-
+                    
                     if (tickAmtX > tickAmtY)
                     {
                         AmountToMoveX = 1;
@@ -125,8 +120,6 @@ namespace SteamQuickSwitch
                         AmountToMoveY = 1;
                         AmountToMoveX = 1;
                     }
-
-                    //MessageBox.Show("AmountToMoveX: " + AmountToMoveX.ToString() + "\n" + "AmountToMoveY: " + AmountToMoveY.ToString());
 
                     // Abort any existing animationThreads
                     if (animationInProgess) animationThread.Abort();
@@ -156,15 +149,12 @@ namespace SteamQuickSwitch
             animationInProgess = true;
             _formToMove.Location = new Point(Properties.Settings.Default.StartingPosX, Properties.Settings.Default.StartingPosY);
             _formToMove.Opacity = 1;
-
-            //MessageBox.Show("totalX: " + totalX.ToString() + "\n" + "totalY: " + totalY.ToString());
+            
             while (currentTimerTick < tickAmount)
             {
                 float movedX = (totalX < 0 && AmountToMoveX >= 0) ? (AmountToMoveX * currentTimerTick) * -1 : AmountToMoveX * currentTimerTick;
                 float movedY = (totalY < 0 && AmountToMoveY >= 0) ? (AmountToMoveY * currentTimerTick) * -1 : AmountToMoveY * currentTimerTick;
-
-                //MessageBox.Show("currentTimerTick: " + currentTimerTick.ToString() + "\n" + "movedX: " + movedX.ToString() + "\n" + "movedY: " + movedY.ToString());
-
+                
                 _formToMove.Location = new Point((int)currentPosX + (int)movedX, (int)currentPosY + (int)movedY);
 
                 currentTimerTick += animationSpeed;
@@ -202,6 +192,7 @@ namespace SteamQuickSwitch
                 MoveSQSToPos();
             }
         }
+
         void FadeSQS(bool _fadeIn)
         {
             if (fadeIP) return;
@@ -238,5 +229,13 @@ namespace SteamQuickSwitch
             return new Point((Screen.PrimaryScreen.Bounds.Width - formSize.Width) / 2,
                 (Screen.PrimaryScreen.Bounds.Height - formSize.Height) / 2);
         }
+        
+        bool CoordinateIsOutOfScreen(int X, int Y)
+        {
+            if (X < 0 || Y < 0 || X > (Screen.PrimaryScreen.Bounds.Width - formSize.Width) || Y > (Screen.PrimaryScreen.Bounds.Height - formSize.Height))
+                return true;
+            return false;
+        }
+
     }
 }

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>publish\</PublishUrlHistory>
-    <InstallUrlHistory />
+    <PublishUrlHistory>publish\|publish/|D:\matti\Documents\Development\Visual Studio\Projects\Actual Projects\SteamQuickSwitch\SteamAccountManager/publish/|https://cdn.rawgit.com/ReckTy/Steam-QuickSwitch/master/SteamQuickSwitch/SteamAccountManager/publish/|https://cdn.raw.githubusercontent.com/ReckTy/Steam-QuickSwitch/master/SteamQuickSwitch/SteamAccountManager/publish/</PublishUrlHistory>
+    <InstallUrlHistory>https://rawgit.com/ReckTy/Steam-Quick-Switch/tree/master/SteamQuickSwitch/SteamAccountManager/|https://rawgit.com/ReckTy/Steam-Quick-Switch/tree/master/SteamQuickSwitch/SteamAccountManager/publish/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />

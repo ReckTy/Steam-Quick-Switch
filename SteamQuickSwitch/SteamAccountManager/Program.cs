@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using Squirrel;
 
 namespace SteamQuickSwitch
 {
@@ -19,6 +20,8 @@ namespace SteamQuickSwitch
             Application.SetCompatibleTextRenderingDefault(false);
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             Application.Run(new Form1());
+
+            CheckForUpdatesAsync();
         }
 
         private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
@@ -28,6 +31,14 @@ namespace SteamQuickSwitch
                 byte[] assemblyData = new byte[stream.Length];
                 stream.Read(assemblyData, 0, assemblyData.Length);
                 return Assembly.Load(assemblyData);
+            }
+        }
+
+        private static async Task CheckForUpdatesAsync()
+        {
+            using (var manager = new UpdateManager("https://github.com/ReckTy/Steam-Quick-Switch/Releases"))
+            {
+                await manager.UpdateApp();
             }
         }
     }
