@@ -283,6 +283,12 @@
   <ItemGroup>
     <Content Include="SQS x48.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrivateInfo\PrivateInfo.csproj">
+      <Project>{eb71ee17-6ec6-4934-b1b7-88c62512d7ea}</Project>
+      <Name>PrivateInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

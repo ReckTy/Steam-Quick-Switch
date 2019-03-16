@@ -17,7 +17,7 @@ namespace SteamQuickSwitch
         
         private RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 
-        private SensitiveDataStorage.SensitiveDataStorage sds = new SensitiveDataStorage.SensitiveDataStorage() { EncryptionPassword = PrivateInfoLibrary.PrivateData.EncryptionPassword };
+        private SensitiveDataStorage.SensitiveDataStorage sds = new SensitiveDataStorage.SensitiveDataStorage() { EncryptionPassword = PrivateInfo.Data.EncryptionPassword };
         private readonly int sdsIDManagerPassword = 0, sdsIDUsernames = 1, sdsIDPasswords = 19;
         
         public Form1()

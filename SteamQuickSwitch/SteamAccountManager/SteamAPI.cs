@@ -10,8 +10,8 @@ namespace SteamQuickSwitch
 {
     public static class SteamAPI
     {
-        static readonly string APIKey = PrivateInfoLibrary.PrivateData.SteamAPIKey;
-
+        static readonly string APIKey = PrivateInfo.Data.SteamAPIKey;
+        
         public static string GetNicknameFromSteamID(string steamID3)
         {
             return GetPlayerSummary(steamID3).Result.Data.Nickname;
