@@ -58,6 +58,8 @@ namespace SteamQuickSwitch
                 }
             }
 
+            // Check for available updates
+            SquirrelHandler.CheckForUpdatesAsync();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -74,6 +76,8 @@ namespace SteamQuickSwitch
 
             // Abort any existing animationThreads
             if (animationThread != null) animationThread.Abort();
+
+            SquirrelHandler.WaitForUpdatesOnShutdown();
         }
         
         private void AssignVersionNumber()
