@@ -38,9 +38,8 @@ namespace SteamQuickSwitch
                 using (var mgr = UpdateManager.GitHubUpdateManager(repoURL))
                 {
                     var updateInfo = await mgr.Result.CheckForUpdate();
-
-                    // Change this before releasing!
-                    if (!updateInfo.ReleasesToApply.Any())
+                    
+                    if (updateInfo.ReleasesToApply.Any())
                     {
                         await mgr.Result.UpdateApp();
 
