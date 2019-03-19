@@ -216,6 +216,7 @@
     <Compile Include="Panels\SettingsTab.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SquirrelHandler.cs" />
     <Compile Include="SteamAPI.cs" />
     <Compile Include="ToolStrips.cs">
       <SubType>Form</SubType>
