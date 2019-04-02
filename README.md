@@ -6,10 +6,10 @@ Before you start using the software, you should know that SQS can easily be acce
 
 When you start SQS you can see four buttons at the top. These are: the home tab, the manage tab, the hotkey button, and the settings tab.
 
-- At the home tab, you simply press which ever account you want to log into.
+- At the home tab, you simply press whichever account you want to log into.
 - At the manage tab, you add your login details for your accounts to appear on the home tab.
 - The hotkey button acts like the [ALT + Q] hotkey, minimizing SQS.
-- Lastly, at the settings tab, you can change all the settings for SQS and most importantly: set a password for accessing the manage tab.
+- Lastly, at the settings tab, you can change all the settings for SQS and, most importantly, set a password for accessing the manage tab.
 
 
 ## Privacy
