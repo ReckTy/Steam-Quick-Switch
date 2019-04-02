@@ -1,15 +1,15 @@
 # Steam Quick Switch
-Steam Quick Switch is a software designed to make it faster switching between multiple Steam-accounts. 
+Steam Quick Switch is a software designed to make it faster switching between multiple Steam accounts. 
 
 ## Usage
 Before you start using the software, you should know that SQS can easily be accessed using the [ALT + Q]-hotkey.
 
 When you start SQS you can see four buttons at the top. These are: the home-tab, the manage-tab, the hotkey-Button and the settings-tab.
 
-- At the Home-tab, you simply press which ever account you want to log into.
-- At the Manage-tab, you add your login-details for your accounts to appear on the Home-tab.
-- The Hotkey-button acts like the [Alt + Q]-hotkey, minimizing SQS.
-- At last: at the Settings-tab, you can change all the settings for SQS and most importantly: set a password for accessing the Manage-tab.
+- At the home tab, you simply press which ever account you want to log into.
+- At the manage tab, you add your login details for your accounts to appear on the home tab.
+- The hotkey button acts like the [Alt + Q]-hotkey, minimizing SQS.
+- Lastly, at the settings tab, you can change all the settings for SQS and most importantly: set a password for accessing the manage tab.
 
 
 ## Privacy
