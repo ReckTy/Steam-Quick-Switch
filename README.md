@@ -14,7 +14,7 @@ When you start SQS you can see four buttons at the top. These are: the home-tab,
 
 ## Privacy
 
-To store account-details, SQS uses encryption that uses Hardware-ID.
+To store account-details, SQS uses encryption that uses hardware id.
 
 SQS does NOT store any data where it is not supposed to. Proof of this can be found in the source-code.
 
