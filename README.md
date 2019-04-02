@@ -4,11 +4,11 @@ Steam Quick Switch is a software designed to make it faster switching between mu
 ## Usage
 Before you start using the software, you should know that SQS can easily be accessed using the [ALT + Q] hotkey.
 
-When you start SQS you can see four buttons at the top. These are: the home-tab, the manage-tab, the hotkey-Button and the settings-tab.
+When you start SQS you can see four buttons at the top. These are: the home tab, the manage tab, the hotkey button, and the settings tab.
 
 - At the home tab, you simply press which ever account you want to log into.
 - At the manage tab, you add your login details for your accounts to appear on the home tab.
-- The hotkey button acts like the [Alt + Q] hotkey, minimizing SQS.
+- The hotkey button acts like the [ALT + Q] hotkey, minimizing SQS.
 - Lastly, at the settings tab, you can change all the settings for SQS and most importantly: set a password for accessing the manage tab.
 
 
