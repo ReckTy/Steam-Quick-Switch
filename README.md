@@ -18,6 +18,13 @@ To store account-details, SQS uses encryption that uses hardware id.
 
 SQS does NOT store any data where it is not supposed to. Proof of this can be found in the source-code.
 
+## Extra features
+
+At the settings tab, there's a button called "Extra Features" containing: you guessed it, extra features! :D
+
+Currently it only contains one feature, which is called "Import/Export game settings". It's pretty self explanatory.
+With this feature, you can import and export settings between the games you have installed on Steam, which is pretty useful if you own the same game on multiple accounts.
+
 ## Screenshots
 ![home](https://user-images.githubusercontent.com/39988708/52696946-9db15d00-2f70-11e9-8396-7203790f1e68.png)
 
