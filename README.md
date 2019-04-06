@@ -1,22 +1,29 @@
 # Steam Quick Switch
-Steam Quick Switch is a software designed to make it faster switching between multiple Steam-accounts. 
+Steam Quick Switch is a software designed to make it faster switching between multiple Steam accounts. 
 
 ## Usage
-Before you start using the software, you should know that SQS can easily be accessed using the [ALT + Q]-Hotkey.
+Before you start using the software, you should know that SQS can easily be accessed using the [ALT + Q] hotkey.
 
-When you start SQS you can see four buttons at the top. These are: The Home-tab, The Manage-tab, The Hotkey-Button and The Settings-tab.
+When you start SQS you can see four buttons at the top. These are: the home tab, the manage tab, the hotkey button, and the settings tab.
 
-- At the Home-tab, you simply press what ever account you want to log into.
-- At the Manage-tab, you add your login-details for your accounts to appear on the Home-tab.
-- The Hotkey-button acts like the [Alt + Q]-Hotkey, minimizing SQS.
-- At last: At the Settings-tab, you can change all the settings for SQS and most importantly, set a password for accessing the Manage-tab.
+- At the home tab, you simply press whichever account you want to log into.
+- At the manage tab, you add your login details for your accounts to appear on the home tab.
+- The hotkey button acts like the [ALT + Q] hotkey, minimizing SQS.
+- Lastly, at the settings tab, you can change all the settings for SQS and, most importantly, set a password for accessing the manage tab.
 
 
 ## Privacy
 
-To store account-details, SQS uses encryption which uses Hardware-ID.
+To store account-details, SQS uses encryption that uses hardware id.
 
-SQS does NOT store any data where it's not supposed to. Proof of this can be found in the source-code.
+SQS does NOT store any data where it is not supposed to. Proof of this can be found in the source-code.
+
+## Extra features
+
+At the settings tab, there's a button called "Extra Features" containing: you guessed it, extra features! :D
+
+Currently it only contains one feature, which is called "Import/Export game settings". It's pretty self explanatory.
+With this feature, you can import and export settings between the games you have installed on Steam, which is pretty useful if you own the same game on multiple accounts.
 
 ## Screenshots
 ![home](https://user-images.githubusercontent.com/39988708/52696946-9db15d00-2f70-11e9-8396-7203790f1e68.png)
