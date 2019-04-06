@@ -1,6 +1,9 @@
 # Steam Quick Switch
 Steam Quick Switch is a software designed to make it faster switching between multiple Steam accounts. 
 
+### Click [HERE](https://github.com/ReckTy/Steam-Quick-Switch/releases/download/v1.0.2/SQS.Setup.exe) to download!
+Since I'm a student and don't really have the economy to spend $80 on a code signing certificate. This means that both your web browser and Windows will probably warn you about downloading SQS. 
+
 ## Usage
 Before you start using the software, you should know that SQS can easily be accessed using the [ALT + Q] hotkey.
 
