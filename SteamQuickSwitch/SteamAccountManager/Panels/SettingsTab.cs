@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
         private void settingCustomStartingPos_CheckedChanged(object sender, EventArgs e)
         {

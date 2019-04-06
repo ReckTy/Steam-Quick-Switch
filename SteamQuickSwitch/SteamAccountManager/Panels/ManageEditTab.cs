@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
 
         private void textBoxEditUsername_KeyPress(object sender, KeyPressEventArgs e)

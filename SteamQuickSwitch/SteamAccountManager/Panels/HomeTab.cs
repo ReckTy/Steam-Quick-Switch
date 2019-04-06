@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
         
         private void StartButton(object _sender, EventArgs _e)

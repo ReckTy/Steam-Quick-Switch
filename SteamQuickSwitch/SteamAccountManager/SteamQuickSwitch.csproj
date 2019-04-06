@@ -187,11 +187,11 @@
     <Compile Include="Panels\ExtrasTab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\HomeTab.cs">
       <SubType>Form</SubType>
@@ -216,6 +216,7 @@
     <Compile Include="Panels\SettingsTab.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SimpleLog.cs" />
     <Compile Include="SquirrelHandler.cs" />
     <Compile Include="SteamAPI.cs" />
     <Compile Include="ToolStrips.cs">
@@ -224,8 +225,8 @@
     <Compile Include="Panels\TopBar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

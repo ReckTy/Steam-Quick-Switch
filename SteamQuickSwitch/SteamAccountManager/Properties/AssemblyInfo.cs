@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Steam Quick Switch")]
-[assembly: AssemblyDescription("A software used to make it easier to switch between multiple Steam accounts.")]
+[assembly: AssemblyDescription("A software used to make it easier switching between multiple Steam accounts.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SteamQuickSwitch")]
 [assembly: AssemblyProduct("Steam Quick Switch")]
@@ -37,3 +37,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.2")]
 [assembly: NeutralResourcesLanguage("en")]
 
+ 

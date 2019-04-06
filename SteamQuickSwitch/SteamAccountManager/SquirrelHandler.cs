@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Squirrel;
+using SimpleLogger;
 
 namespace SteamQuickSwitch
 {
     public static class SquirrelHandler
     {
         private static readonly string repoURL = "https://github.com/ReckTy/Steam-Quick-Switch";
+
+        private static Task<UpdateManager> mgr = null;
 
         public static async void CheckForUpdatesAsync()
         {
@@ -25,40 +28,28 @@ namespace SteamQuickSwitch
 
         public static async Task WaitForUpdatesOnShutdown()
         {
+            // Wait for update to end
             await updateInProgress.ContinueWith(ex => { });
+
+            // Dispose UpdateManager
+            mgr.Result.Dispose();
         }
 
         static Task updateInProgress = Task.FromResult(true);
         private static async Task RealUpdateIfAvailable()
         {
-            //lastUpdateCheck = DateTime.Now;
-            //_logger.Debug("Checking remote server for update.");
+            SimpleLog.Info("Checking remote server for update.");
+
             try
             {
-                using (var mgr = UpdateManager.GitHubUpdateManager(repoURL))
-                {
-                    var updateInfo = await mgr.Result.CheckForUpdate();
-                    
-                    if (updateInfo.ReleasesToApply.Any())
-                    {
-                        await mgr.Result.UpdateApp();
-
-                        string msg = new StringBuilder().AppendLine("Steam Quick Switch has updated!").
-                            AppendLine("Changes will not take affect until SQS is restarted.").ToString();
-
-                        MessageBox.Show(msg, "Steam Quick Switch - Update", MessageBoxButtons.OK,
-                            MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
-
-                    }
-
-                    mgr.Result.Dispose();
-                }
+                mgr = UpdateManager.GitHubUpdateManager(repoURL);
+                await mgr.Result.UpdateApp();
             }
-            catch /*(Exception ex)*/
+            catch (Exception ex)
             {
-                //_logger.Debug(ex.Message);
+                SimpleLog.Error(ex.Message);
             }
         }
-        
     }
 }
+

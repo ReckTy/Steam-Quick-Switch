@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
         private string[] steamNickname = new string[0];
         private string[] steamID3 = new string[0];

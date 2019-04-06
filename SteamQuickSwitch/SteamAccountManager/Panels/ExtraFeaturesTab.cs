@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
 
         private void buttonExtraFeaturesBack_Click(object sender, EventArgs e)

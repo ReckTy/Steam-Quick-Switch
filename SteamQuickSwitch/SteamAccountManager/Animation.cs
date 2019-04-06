@@ -10,7 +10,7 @@ using System.Drawing;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
         bool fadeIP = false;
         bool fadeIn = false;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
 
         private void buttonDonate_Click(object sender, EventArgs e)

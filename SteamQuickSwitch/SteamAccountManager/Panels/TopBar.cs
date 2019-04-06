@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
 
         #region Make window dragable

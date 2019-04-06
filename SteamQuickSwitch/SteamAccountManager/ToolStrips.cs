@@ -7,13 +7,11 @@ using System.Windows.Forms;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1
+    public partial class MainForm
     {
-
         private void exitSQSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Program.CloseApplicationPromt();
         }
-
     }
 }
