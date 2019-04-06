@@ -8,7 +8,7 @@ using Microsoft.Win32;
 
 namespace SteamQuickSwitch
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly Size formSize = new Size(489, 302);
         
@@ -20,7 +20,7 @@ namespace SteamQuickSwitch
         private SensitiveDataStorage.SensitiveDataStorage sds = new SensitiveDataStorage.SensitiveDataStorage() { EncryptionPassword = PrivateInfo.Data.EncryptionPassword };
         private readonly int sdsIDManagerPassword = 0, sdsIDUsernames = 1, sdsIDPasswords = 19;
         
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             
@@ -42,52 +42,21 @@ namespace SteamQuickSwitch
             foreach (Panel panel in panelArray) panel.Location = new Point(5, 54);
 
             LoadSavedSettings();
-            
-            // Close identical apps
-            string[] exePathSplit = Application.ExecutablePath.Split('\\');
-            string executableName = exePathSplit[exePathSplit.Length - 1].Split('.')[0];
-
-            Process[] procList = Process.GetProcessesByName(executableName);
-
-            if (procList.Length > 1)
-            {
-                Process currentProcess = Process.GetCurrentProcess();
-                foreach (Process proc in procList)
-                {
-                    if (proc.Id != currentProcess.Id) proc.Kill();
-                }
-            }
-
-            // Check for available updates
-            SquirrelHandler.CheckForUpdatesAsync();
         }
-
+        
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Checks if user really wants to exit
-            if (e.CloseReason == CloseReason.ApplicationExitCall && MessageBox.Show("Are you sure you want to quit SQS?",
-                "Steam Quick Switch", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
-                e.Cancel = true;
-            else return;
-
             // SaveLoginInfo if CurrentPanel is panelManage
             if (GetCurrentPanelIndex() == 1)
                 SaveLoginInfo();
 
             // Abort any existing animationThreads
             if (animationThread != null) animationThread.Abort();
-
-            SquirrelHandler.WaitForUpdatesOnShutdown();
         }
         
         private void AssignVersionNumber()
         {
-            // Get version-number
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-
-            // Assign version-number
-            labelVersionDisplay.Text = $"Steam Quick Switch v.{ versionInfo.FileVersion }";
+            labelVersionDisplay.Text = $"Steam Quick Switch v.{ Program.GetVersionInfo().FileVersion }";
         }
 
         private void AssignArrays()
