@@ -6,7 +6,7 @@ Steam Quick Switch is a software designed to make it faster switching between mu
 ### Click [HERE](https://github.com/ReckTy/Steam-Quick-Switch/releases/download/v1.0.2/SQS.Setup.exe) to download
 Since I'm a student, I don't really have the economy to spend $80 on a code signing certificate. This means that both your web browser and Windows will probably warn you about downloading Steam Quick Switch.
 
-If anyone would donate, the money would go to this code signing certificate.
+If anyone would [donate](https://www.paypal.me/MattiasAldhagen), the money would go to this code signing certificate.
 
 ## Usage
 Before you start using the software, you should know that SQS can easily be accessed using the [ALT + Q] hotkey.
