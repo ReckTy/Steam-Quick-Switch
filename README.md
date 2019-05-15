@@ -40,3 +40,5 @@ With this feature, you can import and export settings between the games you have
 
 ## Extras
 If you would like to support this project you can donate [here](https://www.paypal.me/MattiasAldhagen).
+
+[Patreon-page](https://www.patreon.com/user/posts?u=20058572)
