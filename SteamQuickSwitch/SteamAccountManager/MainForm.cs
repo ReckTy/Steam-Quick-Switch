@@ -104,7 +104,7 @@ namespace SteamQuickSwitch
             }
             return 0;
         }
-
+        
         void ChangePanel(int desiredPanel)
         {
             focusLabel.Focus();
@@ -201,7 +201,17 @@ namespace SteamQuickSwitch
                 panel.Visible = false;
             }
         }
-        
+
+        private void ExitSQS(object sender = null, EventArgs e = null)
+        {
+            Program.CloseApplicationPromt();
+        }
+
+        private void ExitSteam(object sender = null, EventArgs e = null)
+        {
+            foreach (Process proc in Process.GetProcessesByName("steam")) proc.Kill();
+        }
+
     }
 }
  

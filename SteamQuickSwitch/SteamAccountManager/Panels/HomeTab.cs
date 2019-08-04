@@ -29,7 +29,7 @@ namespace SteamQuickSwitch
 
             int currentButtonID = GetButtonByObject(_sender);
 
-            foreach (Process proc in Process.GetProcessesByName("steam")) proc.Kill();
+            ExitSteam();
 
             // Starts new SteamProcess with login details
             string steamStartArgs = "-login " + sds.ReadLine("Data", sdsIDUsernames + currentButtonID) + " " + sds.ReadLine("Data", sdsIDPasswords + currentButtonID);

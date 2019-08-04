@@ -118,8 +118,9 @@
             this.buttonManagerLogin = new System.Windows.Forms.Button();
             this.textBoxManagerPasswordLogin = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitSteamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSQSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelManageEditItem = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxEditUsername = new System.Windows.Forms.TextBox();
@@ -1518,10 +1519,25 @@
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.exitSQSToolStripMenuItem});
+            this.exitSteamToolStripMenuItem,
+            this.exitSQSToolStripMenuItem,
+            this.closeToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(205, 48);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(205, 70);
+            // 
+            // exitSteamToolStripMenuItem
+            // 
+            this.exitSteamToolStripMenuItem.Name = "exitSteamToolStripMenuItem";
+            this.exitSteamToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.exitSteamToolStripMenuItem.Text = "Exit Steam";
+            this.exitSteamToolStripMenuItem.Click += new System.EventHandler(this.ExitSteam);
+            // 
+            // exitSQSToolStripMenuItem
+            // 
+            this.exitSQSToolStripMenuItem.Name = "exitSQSToolStripMenuItem";
+            this.exitSQSToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.exitSQSToolStripMenuItem.Text = "Exit SQS";
+            this.exitSQSToolStripMenuItem.Click += new System.EventHandler(this.ExitSQS);
             // 
             // closeToolStripMenuItem
             // 
@@ -1529,13 +1545,6 @@
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.closeToolStripMenuItem.Text = "Close Window (ALT + Q)";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.buttonAltQ_Click);
-            // 
-            // exitSQSToolStripMenuItem
-            // 
-            this.exitSQSToolStripMenuItem.Name = "exitSQSToolStripMenuItem";
-            this.exitSQSToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.exitSQSToolStripMenuItem.Text = "Exit SQS";
-            this.exitSQSToolStripMenuItem.Click += new System.EventHandler(this.exitSQSToolStripMenuItem_Click);
             // 
             // panelManageEditItem
             // 
@@ -2279,6 +2288,7 @@
         private System.Windows.Forms.Label label24;
         private System.ComponentModel.BackgroundWorker backgroundWorkerFillAccounts;
         private System.ComponentModel.BackgroundWorker backgroundWorkerFillGames;
+        private System.Windows.Forms.ToolStripMenuItem exitSteamToolStripMenuItem;
     }
 }
 

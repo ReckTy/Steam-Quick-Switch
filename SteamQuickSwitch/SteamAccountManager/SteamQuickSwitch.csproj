@@ -221,9 +221,6 @@
     <Compile Include="SimpleLog.cs" />
     <Compile Include="SquirrelHandler.cs" />
     <Compile Include="SteamAPI.cs" />
-    <Compile Include="ToolStrips.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Panels\TopBar.cs">
       <SubType>Form</SubType>
     </Compile>
