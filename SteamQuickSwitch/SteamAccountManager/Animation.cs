@@ -14,7 +14,7 @@ namespace SteamQuickSwitch
     {
         bool fadeIP = false;
         bool fadeIn = false;
-        
+
         System.Windows.Forms.Timer fadeTimer = new System.Windows.Forms.Timer() { Interval = 20 };
 
         static Thread animationThread;
@@ -32,34 +32,26 @@ namespace SteamQuickSwitch
         static bool animationInProgess = false;
         static int animationSpeed = 3;
 
-        [DllImport("User32.dll")]
-        private static extern short GetAsyncKeyState(int vKey);
-
         #region SQS-Hotkey
 
-        private void hotkeyTimer_Tick(object sender, EventArgs e)
+        private void Hook_KeyPressed(object sender, KeyPressedEventArgs e)
         {
-            hotkeyTimer.Interval = 20;
+            // Return if pressed keys are not "Alt + Q"
+            if ((e.Modifier.ToString() + " + " + e.Key.ToString()) != "Alt + Q") return;
 
-            // ALT + Q Hotkey
-            if ((GetAsyncKeyState(0x12) < 0 && GetAsyncKeyState(0x51) < 0)) // (0x12) = ALT & (0x51) = Q
+            List<string> exceptionProcesses = null;
+
+            if (textBoxExceptionsList.Text != "")
+                exceptionProcesses = textBoxExceptionsList.Lines.ToList();
+            else
+                exceptionProcesses = new List<string> { "skrrt" }; // <===(Random String)
+
+            foreach (string _string in exceptionProcesses)
             {
-                List<string> exceptionProcesses = null;
-
-                if (textBoxExceptionsList.Text != "")
-                    exceptionProcesses = textBoxExceptionsList.Lines.ToList();
-                else
-                    exceptionProcesses = new List<string> { "skrrt" }; // <===(Random String)
-
-                foreach (string _string in exceptionProcesses)
+                if (Process.GetProcessesByName(_string).Length < 1)
                 {
-                    if (Process.GetProcessesByName(_string).Length < 1)
-                    {
-                        ToggleWindow();
-
-                        hotkeyTimer.Interval = 500;
-                        break;
-                    }
+                    ToggleWindow();
+                    break;
                 }
             }
         }
@@ -90,9 +82,9 @@ namespace SteamQuickSwitch
 
                     float tickAmtX = Math.Abs(totalX);
                     float tickAmtY = Math.Abs(totalY);
-                    
+
                     tickAmount = ((int)(tickAmtX > (int)(tickAmtY) ? (int)tickAmtX : (int)tickAmtY));
-                    
+
                     if (tickAmtX > tickAmtY)
                     {
                         AmountToMoveX = 1;
@@ -127,7 +119,7 @@ namespace SteamQuickSwitch
                     // Start new animationThread
                     animationThread = new Thread(() => Animate(this, new Point(Properties.Settings.Default.AnimatePosX, Properties.Settings.Default.AnimatePosY)));
                     animationThread.Start();
-                    
+
                     return;
                 }
 
@@ -149,12 +141,12 @@ namespace SteamQuickSwitch
             animationInProgess = true;
             _formToMove.Location = new Point(Properties.Settings.Default.StartingPosX, Properties.Settings.Default.StartingPosY);
             _formToMove.Opacity = 1;
-            
+
             while (currentTimerTick < tickAmount)
             {
                 float movedX = (totalX < 0 && AmountToMoveX >= 0) ? (AmountToMoveX * currentTimerTick) * -1 : AmountToMoveX * currentTimerTick;
                 float movedY = (totalY < 0 && AmountToMoveY >= 0) ? (AmountToMoveY * currentTimerTick) * -1 : AmountToMoveY * currentTimerTick;
-                
+
                 _formToMove.Location = new Point((int)currentPosX + (int)movedX, (int)currentPosY + (int)movedY);
 
                 currentTimerTick += animationSpeed;
@@ -229,7 +221,7 @@ namespace SteamQuickSwitch
             return new Point((Screen.PrimaryScreen.Bounds.Width - formSize.Width) / 2,
                 (Screen.PrimaryScreen.Bounds.Height - formSize.Height) / 2);
         }
-        
+
         bool CoordinateIsOutOfScreen(int X, int Y)
         {
             if (X < 0 || Y < 0 || X > (Screen.PrimaryScreen.Bounds.Width - formSize.Width) || Y > (Screen.PrimaryScreen.Bounds.Height - formSize.Height))

@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SteamQuickSwitch</RootNamespace>
     <AssemblyName>SQS</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>true</IsWebBootstrapper>
@@ -37,6 +37,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -178,6 +179,7 @@
     <Compile Include="Animation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KeyboardHook.cs" />
     <Compile Include="Panels\ExceptionsTab.cs">
       <SubType>Form</SubType>
     </Compile>

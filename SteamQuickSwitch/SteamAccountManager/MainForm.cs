@@ -19,12 +19,18 @@ namespace SteamQuickSwitch
 
         private SensitiveDataStorage.SensitiveDataStorage sds = new SensitiveDataStorage.SensitiveDataStorage() { EncryptionPassword = PrivateInfo.Data.EncryptionPassword };
         private readonly int sdsIDManagerPassword = 0, sdsIDUsernames = 1, sdsIDPasswords = 19;
-        
+
+        private KeyboardHook hook = new KeyboardHook();
+
         public MainForm()
         {
             InitializeComponent();
             
             sds.CreateFile("Data");
+
+            // Register SQS-Hotkey
+            hook.KeyPressed += Hook_KeyPressed;
+            hook.RegisterHotKey(SteamQuickSwitch.ModifierKeys.Alt, Keys.Q);
         }
 
         private void Form1_Load(object sender, EventArgs e)

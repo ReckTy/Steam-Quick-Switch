@@ -117,7 +117,6 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.buttonManagerLogin = new System.Windows.Forms.Button();
             this.textBoxManagerPasswordLogin = new System.Windows.Forms.TextBox();
-            this.hotkeyTimer = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSQSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -769,6 +768,7 @@
             this.listViewLogins.ForeColor = System.Drawing.Color.Black;
             this.listViewLogins.GridLines = true;
             this.listViewLogins.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewLogins.HideSelection = false;
             this.listViewLogins.Location = new System.Drawing.Point(2, 54);
             this.listViewLogins.MultiSelect = false;
             this.listViewLogins.Name = "listViewLogins";
@@ -1515,12 +1515,6 @@
             this.textBoxManagerPasswordLogin.UseSystemPasswordChar = true;
             this.textBoxManagerPasswordLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxManagerPasswordLogin_KeyPress);
             // 
-            // hotkeyTimer
-            // 
-            this.hotkeyTimer.Enabled = true;
-            this.hotkeyTimer.Interval = 20;
-            this.hotkeyTimer.Tick += new System.EventHandler(this.hotkeyTimer_Tick);
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2199,7 +2193,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxManagerPasswordSet;
         private System.Windows.Forms.CheckBox setting2;
-        private System.Windows.Forms.Timer hotkeyTimer;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitSQSToolStripMenuItem;
